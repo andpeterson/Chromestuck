@@ -1,5 +1,6 @@
 # HomestuckSimplifier
 A chrome extension for making reading the webcomic "Homestuck" much easier
+https://chrome.google.com/webstore/detail/homestuck-simplifier/lafgcjhdcmlfkikgpapndocbggihefme?hl=en
 
 #To Do
 v.5 first ver
