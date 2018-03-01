@@ -22,5 +22,5 @@
    "name": "Homestuck Simplifier",
    "permissions": [ "pageCapture", "activeTab", "tabs", "cookies", "http://www.mspaintadventures.com/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.6.1"
+   "version": "0.7"
 }
