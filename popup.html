@@ -7,31 +7,27 @@
 <html>
   <head>
     <title>Homestuck functionality</title>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script type="text/javascript" src="popup.js"></script>
   </head>
   <body>
-    <p>Left/Right Arrow Keys to increment or decrement the page<br>
-       / to open pesterlogs<br>
-       ALT-D to Delete Game Data<br>
-       ALT-M to open Map<br>
-       ALT-S to Save<br>
-       ALT-L to Load<br>
-       ALT-R or ESC to Restart</p>
-    <form>
-      <input type="checkbox" id="keys"></input>Enable key shortcuts<br>
-      <input type="checkbox" id="cleanup"></input>Enable page cleanup<br>
-      <input type="checkbox" id="colour"></input>Enable character colouring<br>
-      <input type="checkbox" id="names"></input>Enable character naming<br>
-      <input type="checkbox" id="Daedra"></input>Enable Daedric Alphabet<br>
-      <button type="button" id="submit">Save Changes</button>
-      <p>CHANGES WILL BE LOST WHEN BROWSER IS CLOSED</p>
-    <!--<iframe src="http://www.google.com/" width="100%" height="100%" frameborder="0"></iframe>-->
-    </form>
+	<div>
+		<p>Left/Right Arrow Keys to increment or decrement the page<br>
+		   / to open pesterlogs<br>
+		   ALT-D to Delete Game Data<br>
+		   ALT-M to open Map<br>
+		   ALT-S to Save<br>
+		   ALT-L to Load<br>
+		   ALT-R or ESC to Restart</p>
+		<form>
+		  <button class="button" id="keys">Enable key shortcuts</button><br>
+		  <button class="button" id="cleanup">Enable page cleanup</button><br>
+		  <button class="button" id="color">Enable character coloring</button><br>
+		  <button class="button" id="names">Enable character naming</button><br>
+		  <button class="button" id="Daedra">Enable Daedric Alphabet</button><br>
+		  <p>CHANGES WILL BE LOST WHEN BROWSER IS CLOSED</p>
+		<!--<iframe src="http://www.google.com/" width="100%" height="100%" frameborder="0"></iframe>-->
+		</form>
+	</div>
   </body>
 </html>

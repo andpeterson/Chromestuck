@@ -4,7 +4,8 @@
       "scripts": [ "jquery.js", "popup.js", "pageNumber.js" ]
    },
    "browser_action": {
-      "default_title": "enable/disable"
+      "default_title": "enable/disable",
+      "default_popup": "popup.html"
    },
    "content_scripts": [ {
       "js": [ "jquery.js", "setup.js", "incrementPage.js", "clean.js", "colour.js" ],

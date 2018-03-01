@@ -21,6 +21,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   console.log(request);
   if(request == "cookie request")
   {
+	console.log(document.cookie);
     sendResponse(document.cookie);
   }
   else
