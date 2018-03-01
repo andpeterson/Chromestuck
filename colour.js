@@ -38,11 +38,10 @@ if(getCookie("names") == "true")
   //document.body.innerHTML = 
 }
 
-if(getCookie("Daedra") == "true")
+/*if(getCookie("Daedra") == "true")
 {
   document.head.appendChild(fontStyle);
   $('p').css("font-family", "Daedra");
   $('font').css("font-family", "Daedra");
   $('a').css("font-family", "Daedra");
-}
-//$(":contains('John')")
+}*/

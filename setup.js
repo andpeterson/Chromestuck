@@ -26,12 +26,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   }
   else
   {
-    var ca = request.split('-');
-    console.log(ca);
-    for(var i = 0; i < ca.length; i++)
-    {
-      document.cookie=ca[i];
-    }
+    document.cookie=request;
     alert("Changes Made");
     location.reload();
   }

@@ -24,7 +24,7 @@ window.onload = function() {
 					case " cleanup": cleanup = (cookies[i].split("=")[1] == "true"); break;
 					case " color": color = (cookies[i].split("=")[1] == "true"); break;
 					case " names": names = (cookies[i].split("=")[1] == "true"); break;
-					case " Daedra": Daedra = (cookies[i].split("=")[1] == "true"); break;
+					/*case " Daedra": Daedra = (cookies[i].split("=")[1] == "true"); break; */
 				}
 			}
 			//set colors on page
@@ -32,7 +32,7 @@ window.onload = function() {
 			if(cleanup) document.getElementById("cleanup").style.backgroundColor = "#4CAF50";
 			if(color) document.getElementById("color").style.backgroundColor = "#4CAF50";
 			if(names) document.getElementById("names").style.backgroundColor = "#4CAF50";
-			if(Daedra) document.getElementById("Daedra").style.backgroundColor = "#4CAF50";
+			/*if(Daedra) document.getElementById("Daedra").style.backgroundColor = "#4CAF50";*/
 		});
 	});
 
@@ -50,40 +50,40 @@ window.onload = function() {
 	});
 	//CLEANUP
 	document.getElementById("cleanup").addEventListener("mouseover", function() {
-		if(keys) this.style.backgroundColor = "#f44336"; //red
+		if(cleanup) this.style.backgroundColor = "#f44336"; //red
 		else     this.style.backgroundColor = "#4CAF50"; //green
 	});
 	document.getElementById("cleanup").addEventListener("mouseout", function() {
-		if(keys) this.style.backgroundColor = "#4CAF50"; //red
+		if(cleanup) this.style.backgroundColor = "#4CAF50"; //red
 		else     this.style.backgroundColor = "#f44336"; //green
 	});
 	//COLOR
 	document.getElementById("color").addEventListener("mouseover", function() {
-		if(keys) this.style.backgroundColor = "#f44336"; //red
+		if(color) this.style.backgroundColor = "#f44336"; //red
 		else     this.style.backgroundColor = "#4CAF50"; //green
 	});
 	document.getElementById("color").addEventListener("mouseout", function() {
-		if(keys) this.style.backgroundColor = "#4CAF50"; //red
+		if(color) this.style.backgroundColor = "#4CAF50"; //red
 		else     this.style.backgroundColor = "#f44336"; //green
 	});
 	//NAMES
 	document.getElementById("names").addEventListener("mouseover", function() {
-		if(keys) this.style.backgroundColor = "#f44336"; //red
+		if(names) this.style.backgroundColor = "#f44336"; //red
 		else     this.style.backgroundColor = "#4CAF50"; //green
 	});
 	document.getElementById("names").addEventListener("mouseout", function() {
-		if(keys) this.style.backgroundColor = "#4CAF50"; //red
+		if(names) this.style.backgroundColor = "#4CAF50"; //red
 		else     this.style.backgroundColor = "#f44336"; //green
 	});
 	//DAEDRA
-	document.getElementById("Daedra").addEventListener("mouseover", function() {
-		if(keys) this.style.backgroundColor = "#f44336"; //red
+	/*document.getElementById("Daedra").addEventListener("mouseover", function() {
+		if(Daedra) this.style.backgroundColor = "#f44336"; //red
 		else     this.style.backgroundColor = "#4CAF50"; //green
 	});
 	document.getElementById("Daedra").addEventListener("mouseout", function() {
-		if(keys) this.style.backgroundColor = "#4CAF50"; //red
+		if(Daedra) this.style.backgroundColor = "#4CAF50"; //red
 		else     this.style.backgroundColor = "#f44336"; //green
-	});
+	});*/
 
 //////////////////////////////////////////////////
 //                 CLICK EVENT                  //
@@ -101,7 +101,7 @@ window.onload = function() {
 		chrome.tabs.query({active: true, url: "http://www.mspaintadventures.com/*"}, function(tabs){
 			//send cookies to current tab
 			cleanup = !cleanup;
-			chrome.tabs.sendMessage(tabs[0].id, "cleanup=true");
+			chrome.tabs.sendMessage(tabs[0].id, "cleanup=" + cleanup.toString());
 		});
 	});
 
@@ -109,7 +109,7 @@ window.onload = function() {
 		chrome.tabs.query({active: true, url: "http://www.mspaintadventures.com/*"}, function(tabs){
 			//send cookies to current tab
 			color = !color;
-			chrome.tabs.sendMessage(tabs[0].id, "color=true");
+			chrome.tabs.sendMessage(tabs[0].id, "color=" + color.toString());
 		});
 	});
 
@@ -117,16 +117,16 @@ window.onload = function() {
 		chrome.tabs.query({active: true, url: "http://www.mspaintadventures.com/*"}, function(tabs){
 			//send cookies to current tab
 			names = !names;
-			chrome.tabs.sendMessage(tabs[0].id, "names=true");
+			chrome.tabs.sendMessage(tabs[0].id, "names=" + names.toString());
 		});
 	});
 
-	document.getElementById("Daedra").addEventListener("click", function(){
+	/*document.getElementById("Daedra").addEventListener("click", function(){
 		chrome.tabs.query({active: true, url: "http://www.mspaintadventures.com/*"}, function(tabs){
 			//send cookies to current tab
 			Daedra = !Daedra;
-			chrome.tabs.sendMessage(tabs[0].id, "Daedra=true");
+			chrome.tabs.sendMessage(tabs[0].id, "Daedra=" + Daedra.toString());
 		});
-	});
+	});*/
 
 }
