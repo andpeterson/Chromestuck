@@ -32,6 +32,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		case "color=false": UnColor(); break;
 		case "names=true": Names(); break;
 		case "names=false": UnNames(); break;
+		case "cleanup=true": Cleanup(); break;
+		case "cleanup=false": location.reload(); break;
 	}
 	
   }
@@ -93,6 +95,16 @@ function UnNames(){
   document.body.innerHTML = document.body.innerHTML.replace(/Farmstink/gi, 'Jade');
   document.body.innerHTML = document.body.innerHTML.replace(/Buttlass/gi, 'Harley');
 }
+
+//cleanup
+function Cleanup(){
+	if(location.href.indexOf('http://www.mspaintadventures.com/?s=6&p=') > -1)
+	{
+		$("[background = 'http://cdn.mspaintadventures.com/images/bannerframe.png']").parent().parent().parent().parent().parent().remove();
+		$("img[src='http://cdn.mspaintadventures.com/images/news.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
+	}
+}
+
 
 /*var fontStyle = document.createElement('style');
 fontStyle.appendChild(document.createTextNode("\

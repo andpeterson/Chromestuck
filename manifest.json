@@ -8,7 +8,7 @@
       "default_popup": "popup.html"
    },
    "content_scripts": [ {
-      "js": [ "jquery.js", "setup.js", "incrementPage.js", "clean.js", "colour.js" ],
+      "js": [ "jquery.js", "setup.js", "incrementPage.js", "clean.js"],
       "matches": [ "http://www.mspaintadventures.com/*" ]
    } ],
    "description": "Extra functionality for Homestuck",
