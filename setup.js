@@ -34,6 +34,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		case "names=false": UnNames(); break;
 		case "cleanup=true": Cleanup(); break;
 		case "cleanup=false": location.reload(); break;
+		case "keys=true": location.reload(); break;
+		case "keys=false": location.reload(); break;
 	}
 	
   }
