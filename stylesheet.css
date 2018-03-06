@@ -23,6 +23,15 @@ p{
 	text-align: center;
 }
 
+#donate{
+	text-align: center;
+	font-size: 1.3em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
 .button {
   background-color: #cccccc;
   border: none;
