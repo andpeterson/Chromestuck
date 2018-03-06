@@ -78,7 +78,7 @@ if(getCookie("keys") == "true") //if the keys weren't disabled
 
 function IncrementPage()
 {
-	if(location.href == 'http://www.mspaintadventures.comACT6ACT6.php?s=6&p=008143'){
+	if(location.href == 'http://www.mspaintadventures.com/ACT6ACT6.php?s=6&p=008143'){
 		alert("Please wait for preformace to be over!!");
 	}	
 	else if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
