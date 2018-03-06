@@ -37,55 +37,6 @@ window.onload = function() {
 	});
 
 //////////////////////////////////////////////////
-//                 HOVER EVENT                  //
-//////////////////////////////////////////////////
-	//KEYS
-	/*document.getElementById("keys").addEventListener("mouseover", function() {
-		if(keys) this.style.backgroundColor = "#f44336"; //red
-		else     this.style.backgroundColor = "#4CAF50"; //green
-	});
-	document.getElementById("keys").addEventListener("mouseout", function() {
-		if(keys) this.style.backgroundColor = "#4CAF50"; //red
-		else     this.style.backgroundColor = "#f44336"; //green
-	});
-	//CLEANUP
-	document.getElementById("cleanup").addEventListener("mouseover", function() {
-		if(cleanup) this.style.backgroundColor = "#f44336"; //red
-		else     this.style.backgroundColor = "#4CAF50"; //green
-	});
-	document.getElementById("cleanup").addEventListener("mouseout", function() {
-		if(cleanup) this.style.backgroundColor = "#4CAF50"; //red
-		else     this.style.backgroundColor = "#f44336"; //green
-	});
-	//COLOR
-	document.getElementById("color").addEventListener("mouseover", function() {
-		if(color) this.style.backgroundColor = "#f44336"; //red
-		else     this.style.backgroundColor = "#4CAF50"; //green
-	});
-	document.getElementById("color").addEventListener("mouseout", function() {
-		if(color) this.style.backgroundColor = "#4CAF50"; //red
-		else     this.style.backgroundColor = "#f44336"; //green
-	});
-	//NAMES
-	document.getElementById("names").addEventListener("mouseover", function() {
-		if(names) this.style.backgroundColor = "#f44336"; //red
-		else     this.style.backgroundColor = "#4CAF50"; //green
-	});
-	document.getElementById("names").addEventListener("mouseout", function() {
-		if(names) this.style.backgroundColor = "#4CAF50"; //red
-		else     this.style.backgroundColor = "#f44336"; //green
-	});
-	//DAEDRA
-	/*document.getElementById("Daedra").addEventListener("mouseover", function() {
-		if(Daedra) this.style.backgroundColor = "#f44336"; //red
-		else     this.style.backgroundColor = "#4CAF50"; //green
-	});
-	document.getElementById("Daedra").addEventListener("mouseout", function() {
-		if(Daedra) this.style.backgroundColor = "#4CAF50"; //red
-		else     this.style.backgroundColor = "#f44336"; //green
-	});*/
-
-//////////////////////////////////////////////////
 //                 CLICK EVENT                  //
 //////////////////////////////////////////////////
 

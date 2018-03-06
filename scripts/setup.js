@@ -100,10 +100,16 @@ function UnNames(){
 
 //cleanup
 function Cleanup(){
-	if(location.href.indexOf('http://www.mspaintadventures.com/?s=6&p=') > -1)
+	if(location.href.indexOf('http://www.mspaintadventures.com/') > -1)
 	{
-		$("[background = 'http://cdn.mspaintadventures.com/images/bannerframe.png']").parent().parent().parent().parent().parent().remove();
-		$("img[src='http://cdn.mspaintadventures.com/images/news.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
+		if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
+			$("[background = 'images/bannerframeX2.png']").parent().parent().parent().parent().parent().remove();
+			$("img[src='images/sponsors.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
+		}
+		else {
+			$("[background = 'http://cdn.mspaintadventures.com/images/bannerframe.png']").parent().parent().parent().parent().parent().remove();
+			$("img[src='http://cdn.mspaintadventures.com/images/news.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
+		}
 	}
 }
 
