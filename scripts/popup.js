@@ -27,11 +27,11 @@ window.onload = function() {
 					/*case " Daedra": Daedra = (cookies[i].split("=")[1] == "true"); break; */
 				}
 			}
-			//set colors on page
-			if(keys) document.getElementById("keys").style.backgroundColor = "#4CAF50";
-			if(cleanup) document.getElementById("cleanup").style.backgroundColor = "#4CAF50";
-			if(color) document.getElementById("color").style.backgroundColor = "#4CAF50";
-			if(names) document.getElementById("names").style.backgroundColor = "#4CAF50";
+			//set text on buttons if disabled
+			if(keys) document.getElementById("keys").innerHTML = "Disable key shortcuts";
+			if(cleanup) document.getElementById("cleanup").innerHTML = "Disable page cleanup";
+			if(color) document.getElementById("color").innerHTML = "Disable character coloring";
+			if(names) document.getElementById("names").innerHTML = "Disable character naming";
 			/*if(Daedra) document.getElementById("Daedra").style.backgroundColor = "#4CAF50";*/
 		});
 	});
@@ -40,7 +40,7 @@ window.onload = function() {
 //                 HOVER EVENT                  //
 //////////////////////////////////////////////////
 	//KEYS
-	document.getElementById("keys").addEventListener("mouseover", function() {
+	/*document.getElementById("keys").addEventListener("mouseover", function() {
 		if(keys) this.style.backgroundColor = "#f44336"; //red
 		else     this.style.backgroundColor = "#4CAF50"; //green
 	});
