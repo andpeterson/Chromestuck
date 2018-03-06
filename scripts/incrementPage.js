@@ -23,6 +23,7 @@ const SAVE_KEY = 83 // S
 const LOAD_KEY = 76 // L
 const RESTART_ECS_KEY = 27 //ESC
 const RESTART_R_KEY = 82 //R
+const RESTART_ESC_KEY = 27
 
 const AUTO_KEY = 65 // A
 const DELETE_DATA_KEY = 68 //D
@@ -138,7 +139,10 @@ function LoadProgres()
 
 function StartOver()
 {
-  location.href = ($("a:contains('Start Over')").attr("href"));
+	if (confirm('Are you sure you want to save this thing into the database?') && location.href != 'http://www.mspaintadventures.com/?s=6&p=001901') {
+		location.href = ($("a:contains('Start Over')").attr("href"));
+	}
+  
 }
 
 function AutoSaveProgress()
