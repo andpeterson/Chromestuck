@@ -78,12 +78,19 @@ if(getCookie("keys") == "true") //if the keys weren't disabled
 
 function IncrementPage()
 {
-	var tags = document.getElementsByTagName("font");
-	for(var i = 0; i < tags.length; i++){
-		if(tags[i].innerHTML.includes("&gt; "))
-			location.href = tags[i].getElementsByTagName("a")[0].getAttribute("href");
+	if(location.href == 'http://www.mspaintadventures.comACT6ACT6.php?s=6&p=008143'){
+		alert("Please wait for preformace to be over!!");
+	}	
+	else if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
+		location.href = document.getElementsByTagName("font")[32].getElementsByTagName("a")[0].getAttribute("href");
 	}
-	//location.href = ($("[width='600'][border='0'][align='center'][cellpadding='0'][cellspacing='0'][bgcolor='#EEEEEE']").find("a").attr("href"));
+	else{
+		var tags = document.getElementsByTagName("font");
+		for(var i = 0; i < tags.length; i++){
+			if(tags[i].innerHTML.includes("&gt; "))
+				location.href = tags[i].getElementsByTagName("a")[0].getAttribute("href");
+		}
+	}
 }
 
 function DecrementPage()
