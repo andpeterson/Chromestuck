@@ -78,7 +78,12 @@ if(getCookie("keys") == "true") //if the keys weren't disabled
 
 function IncrementPage()
 {
-  location.href = ($("[width='600'][border='0'][align='center'][cellpadding='0'][cellspacing='0'][bgcolor='#EEEEEE']").find("a").attr("href"));
+	var tags = document.getElementsByTagName("font");
+	for(var i = 0; i < tags.length; i++){
+		if(tags[i].innerHTML.includes("&gt; "))
+			location.href = tags[i].getElementsByTagName("a")[0].getAttribute("href");
+	}
+	//location.href = ($("[width='600'][border='0'][align='center'][cellpadding='0'][cellspacing='0'][bgcolor='#EEEEEE']").find("a").attr("href"));
 }
 
 function DecrementPage()
