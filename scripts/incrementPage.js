@@ -107,13 +107,21 @@ function SwitchPesterlogState()
   else if(pester_log_state == 0)
   {
     $(".button:first").parent().attr("style", "display: none");
-    $(".button:last").parent().parent().removeAttr("style");
+    $(".button:eq(1)").parent().parent().removeAttr("style");
+	if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
+		$(".button:eq(2)").parent().attr("style", "display: none");
+		$(".button:eq(3)").parent().parent().removeAttr("style");
+	}
     pester_log_state = 1;
   }
   else if(pester_log_state == 1)
   {
     $("button:first").parent().removeAttr("style");
-    $("button:last").parent().parent().attr("style", "display: none");
+    $("button:eq(1)").parent().parent().attr("style", "display: none");
+	if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
+		$(".button:eq(2)").parent().removeAttr("style");
+		$(".button:eq(3)").parent().parent().attr("style", "display: none");
+	}
     pester_log_state = 0;
   }
 }
