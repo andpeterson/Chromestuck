@@ -45,7 +45,9 @@ if(getCookie("color") == "true") Color();
 if(getCookie("names") == "true") Names();
 
 function Color() {
-  $("font:contains('John:'):first").attr("style", "color:#0715CD");//.attr("style", "color:#0715CD");
+	
+	//KIDS
+  $("font:contains('John:'):first").attr("style", "color:#0715CD");
   $("a:contains('John:')").attr("style", "color:#0715CD");
   $("font:contains('Dave:'):first").attr("style", "color:#E00707");
   $("a:contains('Dave:')").attr("style", "color:#E00707");
@@ -53,6 +55,8 @@ function Color() {
   $("a:contains('Rose:')").attr("style", "color:#B536DA");
   $("font:contains('Jade:'):first").attr("style", "color:#4AC925");
   $("a:contains('Jade:')").attr("style", "color:#4AC925");
+  
+	//TROLLS
   $("font:contains('Aradia:'):first").attr("style", "color:#A10000");
   $("a:contains('Aradia:')").attr("style", "color:#A10000");
   $("font:contains('Tavros:'):first").attr("style", "color:#A15000");
@@ -77,6 +81,19 @@ function Color() {
   $("a:contains('Feferi:')").attr("style", "color:#77003C");
   $("font:contains('Karkat:'):first").attr("style", "color:#626262");
   $("a:contains('Karkat:')").attr("style", "color:#626262");
+
+	//KIDS SPRITES
+  $("font:contains('Nannasprite:'):first").attr("style", "color:#00d5f2");
+  $("a:contains('Nannasprite:')").attr("style", "color:#00d5f2");
+  $("font:contains('Jaspersprite:'):first").attr("style", "color:#f141ef");
+  $("a:contains('Jaspersprite:')").attr("style", "color:#f141ef");
+  $("font:contains('Davesprite'):first").attr("style", "color:#f2a400");
+  $("a:contains('Davesprite'):").attr("style", "color:#f2a400");
+  $("font:contains('Jadesprite'):first").attr("style", "color:#1f9400");
+  $("a:contains('Jadesprite'):").attr("style", "color:#1f9400");
+  
+	
+  
 }
 function UnColor() {
   $("font:contains('John:')").attr("style", "color:#000000");
