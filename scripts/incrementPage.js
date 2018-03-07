@@ -25,6 +25,8 @@ const RESTART_ECS_KEY = 27 //ESC
 const RESTART_R_KEY = 82 //R
 const RESTART_ESC_KEY = 27
 
+const DOC_SCRATCH_KEY = 190 //Period
+
 const AUTO_KEY = 65 // A
 const DELETE_DATA_KEY = 68 //D
 const MAP_KEY = 77 // M
@@ -36,6 +38,7 @@ const UP_KEY = 38
 const DOWN_KEY = 40
 
 var pester_log_state = 0; //current state of the pesterlog
+var doc_scratch_state = false;
 
 /*var isCtrl = false; 
 $(document).keyup(function (e) { 
@@ -72,6 +75,7 @@ if(getCookie("keys") == "true") //if the keys weren't disabled
         case LEFT_KEY: DecrementPage(); break;
         case PESTER_LOG_KEY: SwitchPesterlogState(); break;
         case RESTART_ESC_KEY: StartOver(); break;
+		case DOC_SCRATCH_KEY: FuckDocScratch(); break;
       }
     }
   });
@@ -125,6 +129,19 @@ function SwitchPesterlogState()
 	}
     pester_log_state = 0;
   }
+}
+
+function FuckDocScratch(){
+	doc_scratch_state = !doc_scratch_state;
+	spans = document.getElementsByTagName("span");
+	for(var i = 0; i < spans.length; ++i)
+		if(spans[i].getAttribute("style").includes("color: #FFFFFF"))
+			if(doc_scratch_state)
+				spans[i].setAttribute("style", "color: #FFFFFF; background-color: #3390FF")
+			else{
+				spans[i].removeAttribute("style");
+				spans[i].setAttribute("style", "color: #FFFFFF; background-color: #EEEEEE");
+			}
 }
 
 function SaveProgres()
