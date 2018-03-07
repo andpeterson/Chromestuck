@@ -41,41 +41,76 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   }
 })
 
+if(getCookie("color") == "true") Color();
+if(getCookie("names") == "true") Names();
+
 function Color() {
-  $("font:contains('John:')").attr("style", "color:#0715CD");
-  $("font:contains('Dave:')").attr("style", "color:#E00707");
-  $("font:contains('Rose:')").attr("style", "color:#B536DA");
-  $("font:contains('Jade:')").attr("style", "color:#4AC925");
-  $("font:contains('Aradia:')").attr("style", "color:#A10000");
-  $("font:contains('Tavros:')").attr("style", "color:#A15000");
-  $("font:contains('Sollux:')").attr("style", "color:#A1A100");
-  $("font:contains('Nepeta:')").attr("style", "color:#416600");
-  $("font:contains('Kanaya:')").attr("style", "color:#008141");
-  $("font:contains('Terezi:')").attr("style", "color:#008282");
-  $("font:contains('Vriska:')").attr("style", "color:#005682");
-  $("font:contains('Equius:')").attr("style", "color:#000056");
-  $("font:contains('Gamzee:')").attr("style", "color:#2B0057");
-  $("font:contains('Eridan:')").attr("style", "color:#6A006A");
-  $("font:contains('Feferi:')").attr("style", "color:#77003C");
-  $("font:contains('Karkat:')").attr("style", "color:#626262");
+  $("font:contains('John:'):first").attr("style", "color:#0715CD");//.attr("style", "color:#0715CD");
+  $("a:contains('John:')").attr("style", "color:#0715CD");
+  $("font:contains('Dave:'):first").attr("style", "color:#E00707");
+  $("a:contains('Dave:')").attr("style", "color:#E00707");
+  $("font:contains('Rose:'):first").attr("style", "color:#B536DA");
+  $("a:contains('Rose:')").attr("style", "color:#B536DA");
+  $("font:contains('Jade:'):first").attr("style", "color:#4AC925");
+  $("a:contains('Jade:')").attr("style", "color:#4AC925");
+  $("font:contains('Aradia:'):first").attr("style", "color:#A10000");
+  $("a:contains('Aradia:')").attr("style", "color:#A10000");
+  $("font:contains('Tavros:'):first").attr("style", "color:#A15000");
+  $("a:contains('Tavros:')").attr("style", "color:#A15000");
+  $("font:contains('Sollux:'):first").attr("style", "color:#A1A100");
+  $("a:contains('Sollux:')").attr("style", "color:#A1A100");
+  $("font:contains('Nepeta:'):first").attr("style", "color:#416600");
+  $("a:contains('Nepeta:')").attr("style", "color:#416600");
+  $("font:contains('Kanaya:'):first").attr("style", "color:#008141");
+  $("a:contains('Kanaya:')").attr("style", "color:#008141");
+  $("font:contains('Terezi:'):first").attr("style", "color:#008282");
+  $("a:contains('Terezi:')").attr("style", "color:#008282");
+  $("font:contains('Vriska:':first").attr("style", "color:#005682");
+  $("a:contains('Vriska:')").attr("style", "color:#005682");
+  $("font:contains('Equius:'):first").attr("style", "color:#000056");
+  $("a:contains('Equius:')").attr("style", "color:#000056");
+  $("font:contains('Gamzee:'):first").attr("style", "color:#2B0057");
+  $("a:contains('Gamzee:')").attr("style", "color:#2B0057");
+  $("font:contains('Eridan:'):first").attr("style", "color:#6A006A");
+  $("a:contains('Eridan:')").attr("style", "color:#6A006A");
+  $("font:contains('Feferi:'):first").attr("style", "color:#77003C");
+  $("a:contains('Feferi:')").attr("style", "color:#77003C");
+  $("font:contains('Karkat:'):first").attr("style", "color:#626262");
+  $("a:contains('Karkat:')").attr("style", "color:#626262");
 }
 function UnColor() {
   $("font:contains('John:')").attr("style", "color:#000000");
+  $("a:contains('John:')").attr("style", "color:#000000");
   $("font:contains('Dave:')").attr("style", "color:#000000");
+  $("a:contains('Dave:')").attr("style", "color:#000000");
   $("font:contains('Rose:')").attr("style", "color:#000000");
+  $("a:contains('Rose:')").attr("style", "color:#000000");
   $("font:contains('Jade:')").attr("style", "color:#000000");
+  $("a:contains('Jade:')").attr("style", "color:#000000");
   $("font:contains('Aradia:')").attr("style", "color:#000000");
+  $("a:contains('Aradia:')").attr("style", "color:#000000");
   $("font:contains('Tavros:')").attr("style", "color:#000000");
+  $("a:contains('Tavros:')").attr("style", "color:#000000");
   $("font:contains('Sollux:')").attr("style", "color:#000000");
+  $("a:contains('Sollux:')").attr("style", "color:#000000");
   $("font:contains('Nepeta:')").attr("style", "color:#000000");
+  $("a:contains('Nepeta:')").attr("style", "color:#000000");
   $("font:contains('Kanaya:')").attr("style", "color:#000000");
+  $("a:contains('Kanaya:')").attr("style", "color:#000000");
   $("font:contains('Terezi:')").attr("style", "color:#000000");
+  $("a:contains('Terezi:')").attr("style", "color:#000000");
   $("font:contains('Vriska:')").attr("style", "color:#000000");
+  $("a:contains('Vriska:')").attr("style", "color:#000000");
   $("font:contains('Equius:')").attr("style", "color:#000000");
+  $("a:contains('Equius:')").attr("style", "color:#000000");
   $("font:contains('Gamzee:')").attr("style", "color:#000000");
+  $("a:contains('Gamzee:')").attr("style", "color:#000000");
   $("font:contains('Eridan:')").attr("style", "color:#000000");
+  $("a:contains('Eridan:')").attr("style", "color:#000000");
   $("font:contains('Feferi:')").attr("style", "color:#000000");
+  $("a:contains('Feferi:')").attr("style", "color:#000000");
   $("font:contains('Karkat:')").attr("style", "color:#000000");
+  $("a:contains('Karkat:')").attr("style", "color:#000000");
 }
 function Names(){
   document.body.innerHTML = document.body.innerHTML.replace(/John/gi, 'Zoosmell');
@@ -113,6 +148,11 @@ function Cleanup(){
 	}
 }
 
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
 
 /*var fontStyle = document.createElement('style');
 fontStyle.appendChild(document.createTextNode("\
