@@ -1,4 +1,4 @@
-chrome.runtime.sendMessage("reloaded")
+chrome.runtime.sendMessage("reloaded")	
 
 function getCookie(cname) {
   var name = cname + "=";
@@ -9,6 +9,11 @@ function getCookie(cname) {
       if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
   }
   return "";
+}
+
+//Auto Load where you left off
+if(location.href == 'http://www.mspaintadventures.com/?s=6&p=001901#chromestuck'){
+	location.href = ($("a:contains('Load Game')").attr("href"));
 }
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
