@@ -23,7 +23,8 @@ window.onload = function() {
 					case " keys": keys = (cookies[i].split("=")[1] == "true"); break;
 					case " cleanup": cleanup = (cookies[i].split("=")[1] == "true"); break;
 					case " color": color = (cookies[i].split("=")[1] == "true"); break;
-					case " names": names = (cookies[i].split("=")[1] == "true"); break;
+					case " names": names = (cookies[i].split("=")[1] == "true"); break
+					case " save": names = (cookies[i].split("=")[1] == "true"); break;
 					/*case " Daedra": Daedra = (cookies[i].split("=")[1] == "true"); break; */
 				}
 			}
@@ -32,6 +33,7 @@ window.onload = function() {
 			if(cleanup) document.getElementById("cleanup").innerHTML = "Disable page cleanup";
 			if(color) document.getElementById("color").innerHTML = "Disable character coloring";
 			if(names) document.getElementById("names").innerHTML = "Disable character naming";
+			if(names) document.getElementById("save").innerHTML = "Disable Auto Save";
 			/*if(Daedra) document.getElementById("Daedra").style.backgroundColor = "#4CAF50";*/
 		});
 	});
@@ -69,6 +71,15 @@ window.onload = function() {
 			//send cookies to current tab
 			names = !names;
 			chrome.tabs.sendMessage(tabs[0].id, "names=" + names.toString());
+		});
+	});
+	
+	
+	document.getElementById("save").addEventListener("click", function(){
+		chrome.tabs.query({active: true, url: "http://www.mspaintadventures.com/*"}, function(tabs){
+			//send cookies to current tab
+			names = !names;
+			chrome.tabs.sendMessage(tabs[0].id, "save=" + names.toString());
 		});
 	});
 

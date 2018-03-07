@@ -35,6 +35,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		case "cleanup=false": location.reload(); break;
 		case "keys=true": location.reload(); break;
 		case "keys=false": location.reload(); break;
+		case "save=true": AutoSave(); break; 
 	}
 	
   }
@@ -43,6 +44,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 if(getCookie("color") == "true") Color();
 if(getCookie("names") == "true") Names();
 if(getCookie("cleanup") == "true") Cleanup();
+if(getCookie("save") == "true") AutoSave();
 
 function Color() {
 	
@@ -164,6 +166,11 @@ function Cleanup(){
 			$("img[src='http://cdn.mspaintadventures.com/images/news.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
 		}
 	}
+}
+
+function AutoSave(){
+	if(!location.href.includes(getCookie("p_cookie")) && location.href != 'http://www.mspaintadventures.com/?s=6&p=001901#chromestuck')
+		location.href = ($("a:contains('Save Game')").attr("href"));
 }
 
 
