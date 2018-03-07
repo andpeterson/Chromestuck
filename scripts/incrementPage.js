@@ -99,7 +99,6 @@ function IncrementPage()
 	else if(location.href != 'http://www.mspaintadventures.com/?s=6&p=002153' && 
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002238' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002376' &&
-			location.href != 'http://www.mspaintadventures.com/?s=6&p=002669' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002730' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=003258' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=003620' &&
@@ -128,7 +127,6 @@ function DecrementPage()
 	if(location.href != 'http://www.mspaintadventures.com/?s=6&p=002153' && 
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002238' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002376' &&
-			location.href != 'http://www.mspaintadventures.com/?s=6&p=002669' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002730' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=003258' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=003620' &&
@@ -153,7 +151,6 @@ function SwitchPesterlogState()
 	if(location.href != 'http://www.mspaintadventures.com/?s=6&p=002153' && 
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002238' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002376' &&
-			location.href != 'http://www.mspaintadventures.com/?s=6&p=002669' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=002730' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=003258' &&
 			location.href != 'http://www.mspaintadventures.com/?s=6&p=003620' &&
