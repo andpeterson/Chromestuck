@@ -1,9 +1,3 @@
-/*document.cookie="keys=true"
-document.cookie="cleanup=false"
-document.cookie="colour=false"
-document.cookie="names=false"
-document.cookie="Daedra=false"*/
-
 chrome.runtime.sendMessage("reloaded")
 
 function getCookie(cname) {
@@ -43,6 +37,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 
 if(getCookie("color") == "true") Color();
 if(getCookie("names") == "true") Names();
+if(getCookie("cleanup") == "true") Cleanup();
 
 function Color() {
 	
@@ -69,7 +64,7 @@ function Color() {
   $("a:contains('Kanaya:')").attr("style", "color:#008141");
   $("font:contains('Terezi:'):first").attr("style", "color:#008282");
   $("a:contains('Terezi:')").attr("style", "color:#008282");
-  $("font:contains('Vriska:':first").attr("style", "color:#005682");
+  $("font:contains('Vriska:'):first").attr("style", "color:#005682");
   $("a:contains('Vriska:')").attr("style", "color:#005682");
   $("font:contains('Equius:'):first").attr("style", "color:#000056");
   $("a:contains('Equius:')").attr("style", "color:#000056");
@@ -88,9 +83,9 @@ function Color() {
   $("font:contains('Jaspersprite:'):first").attr("style", "color:#f141ef");
   $("a:contains('Jaspersprite:')").attr("style", "color:#f141ef");
   $("font:contains('Davesprite'):first").attr("style", "color:#f2a400");
-  $("a:contains('Davesprite'):").attr("style", "color:#f2a400");
+  $("a:contains('Davesprite')").attr("style", "color:#f2a400");
   $("font:contains('Jadesprite'):first").attr("style", "color:#1f9400");
-  $("a:contains('Jadesprite'):").attr("style", "color:#1f9400");
+  $("a:contains('Jadesprite')").attr("style", "color:#1f9400");
   
 	
   
@@ -152,18 +147,21 @@ function UnNames(){
 
 //cleanup
 function Cleanup(){
-	if(location.href.indexOf('http://www.mspaintadventures.com/') > -1)
+	//if on comic and enabled
+	if(location.href.indexOf('http://www.mspaintadventures.com/') > -1 && getCookie("cleanup") == "true")
 	{
 		if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
-			$("[background = 'images/bannerframeX2.png']").parent().parent().parent().parent().parent().remove();
-			$("img[src='images/sponsors.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
+				$("[background = 'images/bannerframeX2.png']").parent().parent().parent().parent().parent().remove();
+				$("img[src='images/sponsors.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
 		}
-		else {
+		else{
 			$("[background = 'http://cdn.mspaintadventures.com/images/bannerframe.png']").parent().parent().parent().parent().parent().remove();
 			$("img[src='http://cdn.mspaintadventures.com/images/news.png']").parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
 		}
 	}
 }
+
+
 
 function getCookie(name) {
   var value = "; " + document.cookie;
