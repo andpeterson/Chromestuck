@@ -23,6 +23,15 @@ p{
 	text-align: center;
 }
 
+a:not(#donate){
+  color: black;
+  text-decoration: none; /* no underline */
+}
+a:not(#donate):hover{
+  color: blue;
+  text-decoration: none; /* no underline */
+}
+
 #donate{
 	text-align: center;
 	font-size: 1.3em;
