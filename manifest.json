@@ -22,5 +22,5 @@
    "name": "Chromestuck",
    "permissions": [ "pageCapture", "activeTab", "tabs", "cookies", "http://www.mspaintadventures.com/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.7"
+   "version": "1.0"
 }
