@@ -89,13 +89,32 @@ if(getCookie("keys") == "true") //if the keys weren't disabled
 
 function IncrementPage()
 {
+	
 	if(location.href == 'http://www.mspaintadventures.com/ACT6ACT6.php?s=6&p=008143'){
 		alert("Please wait for preformace to be over!!");
-	}	
+	}
 	else if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
 		location.href = document.getElementsByTagName("font")[32].getElementsByTagName("a")[0].getAttribute("href");
 	}
-	else{
+	else if(location.href != 'http://www.mspaintadventures.com/?s=6&p=002153' && 
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002238' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002376' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002669' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002730' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003258' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003620' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004692' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004979' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005221' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005338' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005595' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005625' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006720' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006725' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007163' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007208' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007298' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=008300'){
 		var tags = document.getElementsByTagName("font");
 		for(var i = 0; i < tags.length; i++){
 			if(tags[i].innerHTML.includes("&gt; "))
@@ -106,48 +125,108 @@ function IncrementPage()
 
 function DecrementPage()
 {
-  location.href = ($("a:contains('Go Back')").attr("href"));
+	if(location.href != 'http://www.mspaintadventures.com/?s=6&p=002153' && 
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002238' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002376' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002669' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002730' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003258' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003620' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004692' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004979' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005221' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005338' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005595' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005625' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006720' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006725' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007163' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007208' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007298' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=008300'){
+		location.href = ($("a:contains('Go Back')").attr("href"));
+	}
 }
 
 function SwitchPesterlogState()
 {
-  if($(".button").length == 0)
-  {
-    alert("There are no PesterLogs on this page");
-  }
-  else if(pester_log_state == 0)
-  {
-    $(".button:first").parent().attr("style", "display: none");
-    $(".button:eq(1)").parent().parent().removeAttr("style");
-	if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
-		$(".button:eq(2)").parent().attr("style", "display: none");
-		$(".button:eq(3)").parent().parent().removeAttr("style");
+	if(location.href != 'http://www.mspaintadventures.com/?s=6&p=002153' && 
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002238' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002376' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002669' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002730' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003258' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003620' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004692' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004979' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005221' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005338' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005595' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005625' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006720' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006725' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007163' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007208' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007298' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=008300'){
+		if($(".button").length == 0)
+		{
+			alert("There are no PesterLogs on this page");
+		}
+		else if(pester_log_state == 0)
+		{
+			$(".button:first").parent().attr("style", "display: none");
+			$(".button:eq(1)").parent().parent().removeAttr("style");
+			if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
+				$(".button:eq(2)").parent().attr("style", "display: none");
+				$(".button:eq(3)").parent().parent().removeAttr("style");
+			}
+			pester_log_state = 1;
+		}
+		else if(pester_log_state == 1)
+		{
+			$("button:first").parent().removeAttr("style");
+			$("button:eq(1)").parent().parent().attr("style", "display: none");
+			if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
+				$(".button:eq(2)").parent().removeAttr("style");
+				$(".button:eq(3)").parent().parent().attr("style", "display: none");
+			}
+			pester_log_state = 0;
+		}
 	}
-    pester_log_state = 1;
-  }
-  else if(pester_log_state == 1)
-  {
-    $("button:first").parent().removeAttr("style");
-    $("button:eq(1)").parent().parent().attr("style", "display: none");
-	if(location.href.includes('http://www.mspaintadventures.com/ACT6ACT5ACT1x2COMBO.php')){
-		$(".button:eq(2)").parent().removeAttr("style");
-		$(".button:eq(3)").parent().parent().attr("style", "display: none");
-	}
-    pester_log_state = 0;
-  }
 }
 
 function FuckDocScratch(){
-	doc_scratch_state = !doc_scratch_state;
-	spans = document.getElementsByTagName("span");
-	for(var i = 0; i < spans.length; ++i)
-		if(spans[i].getAttribute("style").includes("color: #FFFFFF"))
-			if(doc_scratch_state)
-				spans[i].setAttribute("style", "color: #FFFFFF; background-color: #3390FF")
-			else{
-				spans[i].removeAttribute("style");
-				spans[i].setAttribute("style", "color: #FFFFFF; background-color: #EEEEEE");
-			}
+	if(location.href != 'http://www.mspaintadventures.com/?s=6&p=002153' && 
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002238' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002376' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002669' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=002730' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003258' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=003620' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004692' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=004979' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005221' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005338' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005595' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=005625' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006720' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=006725' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007163' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007208' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=007298' &&
+			location.href != 'http://www.mspaintadventures.com/?s=6&p=008300'){
+		doc_scratch_state = !doc_scratch_state;
+		spans = document.getElementsByTagName("span");
+		for(var i = 0; i < spans.length; ++i)
+			if(spans[i].getAttribute("style").includes("color: #FFFFFF"))
+				if(doc_scratch_state)
+					spans[i].setAttribute("style", "color: #FFFFFF; background-color: #3390FF")
+				else{
+					spans[i].removeAttribute("style");
+					spans[i].setAttribute("style", "color: #FFFFFF; background-color: #EEEEEE");
+				}
+	}
 }
 
 function SaveProgres()
