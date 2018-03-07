@@ -16,6 +16,12 @@
   Auto Key shutoff on flash game
 */
 
+//if homepage redirect to first page
+if(location.href == 'http://www.mspaintadventures.com/' || location.href == 'http://www.mspaintadventures.com/?s=6')
+{
+  location.href = 'http://www.mspaintadventures.com/?s=6&p=001901';
+}
+
 const CTRL_KEY = 17 // CTRL
 const ALT_KEY = 18 // ALT
 
